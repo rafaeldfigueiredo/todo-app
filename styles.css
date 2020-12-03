@@ -28,7 +28,7 @@ html {
 }
 
 #todo-list li{
-    width: 100%; text-align: center;margin-bottom: 2px;
+     text-align: center;margin-bottom: 2px;
 }
 
 #todo-list li:hover{
@@ -37,6 +37,10 @@ html {
 
 #todo-list li a{
     margin-left: 22px;
+}
+
+.del{
+    color: black; border: 1px solid red; background-color: white;
 }
 
 #todo-input,#addTodoBtn{

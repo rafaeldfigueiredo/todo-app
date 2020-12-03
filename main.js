@@ -26,7 +26,7 @@ function renderTodos() {
 
             //Creates a anchor tag to delete item
             let delEl = document.createElement('a');
-            delEl.setAttribute('href', '#');
+            delEl.setAttribute('href', '#'); delEl.setAttribute('class','del')
             delEl.textContent = 'Excluir';
             var pos = todos.indexOf(todo);
             delEl.setAttribute('onclick', `deleteTodos(${pos})`); // Global variable for deleteTodos function delete the element where it is on the todos list
