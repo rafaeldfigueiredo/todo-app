@@ -1,15 +1,19 @@
 // initialize variables
-let todos = ['Estudar', 'Comer', 'Jogar', 'Dormir'];
+let todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+
 const listEl = document.querySelector('#todo-list');
 const inputEl = document.querySelector('#todo-input');
 const buttonEl = document.querySelector('#addTodoBtn');
 
 // Event to add a item in the todos list and render it
-buttonEl.addEventListener('click', () => {
-    todos.push(inputEl.value) // adds the input value on the todos list
-    inputEl.value = '' // reset the value on the input
-    renderTodos(); // re-render all todos with updated list
-})
+buttonEl.addEventListener('click',
+    () => {
+        inputEl == '' ? alert('Digite uma tarefa!') :
+        todos.push(inputEl.value) // adds the input value on the todos list
+        inputEl.value = '' // reset the value on the input
+        renderTodos(); 
+        saveToStorage();
+    })
 
 //Self-explanatory
 function renderTodos() {
@@ -25,7 +29,7 @@ function renderTodos() {
             delEl.setAttribute('href', '#');
             delEl.textContent = 'Excluir';
             var pos = todos.indexOf(todo);
-            delEl.setAttribute('onclick',`deleteTodos(${pos})`); // Global variable for deleteTodos function delete the element where it is on the todos list
+            delEl.setAttribute('onclick', `deleteTodos(${pos})`); // Global variable for deleteTodos function delete the element where it is on the todos list
 
             //Append the delete button to the element
             el.appendChild(delEl);
@@ -37,6 +41,11 @@ function renderTodos() {
 function deleteTodos(pos) {
     todos.splice(pos, 1)
     renderTodos();
+    saveToStorage();
+}
+
+function saveToStorage(){
+    localStorage.setItem('list_todos', JSON.stringify(todos))
 }
 
 renderTodos();
