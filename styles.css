@@ -1,0 +1,42 @@
+html {
+  background-color: goldenrod;
+  color: white;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 99.5%;
+}
+
+#app,
+#app header,
+#todo-list li,
+#todo-input,
+#addTodoBtn {
+  border: 1px solid black;
+}
+
+#app {
+    padding: 50px; display: grid; place-items: center;
+}
+
+#todo-list{
+    display: grid; place-items: center;
+    padding-left: 0;width: 100%;
+    list-style-type: none; 
+}
+
+#todo-list li{
+    width: 100%; text-align: center;margin-bottom: 2px;
+}
+
+#todo-list li:hover{
+    background-color: white; color: black;
+}
+
+#todo-list li a{
+    margin-left: 22px;
+}
+
+#todo-input,#addTodoBtn{
+    display: flex; margin: 2px;
+}
