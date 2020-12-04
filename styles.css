@@ -16,31 +16,42 @@ html {
   border: 1px solid black;
 }
 
+#app header,#todo-list{
+    background-color: chocolate;
+}
+
 #app {
     padding: 50px; display: grid; place-items: center;
+    background-color: orange;
+}
+
+#app header{
+    text-align: center;padding: 5px;margin-top: 0;
 }
 
 #todo-list{
     display: grid; place-items: center;
-    padding: 15px 0;
+    padding: 15px 10px;
     padding-left: 0;width: 100%;
     list-style-type: none; 
 }
 
 #todo-list li{
-     text-align: center;margin-bottom: 2px;
+     text-align: center;margin-bottom: 2px; 
+     transition: 0.2s; background: linear-gradient(to right bottom,#BDD7EE,blue);
 }
 
 #todo-list li:hover{
-    background-color: white; color: black;
-}
-
-#todo-list li a{
-    margin-left: 22px;
+    background: white; color: black;
 }
 
 .del{
     color: black; border: 1px solid red; background-color: white;
+    margin-left: 10px;transition: 0.2s;
+}
+
+.del:hover{
+    color: white; background-color: red;
 }
 
 #todo-input,#addTodoBtn{
