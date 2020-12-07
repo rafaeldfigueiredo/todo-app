@@ -8,7 +8,7 @@ const buttonEl = document.querySelector('#addTodoBtn');
 // Event to add a item in the todos list and render it
 buttonEl.addEventListener('click',
     () => {
-        inputEl.value == '' ? alert('Digite uma tarefa!') :
+        inputEl.innerHTML == '' ? alert('Digite uma tarefa!') :
         todos.push(inputEl.value) // adds the input value on the todos list
         inputEl.value = '' // reset the value on the input
         renderTodos(); 
