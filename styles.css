@@ -1,5 +1,5 @@
 html {
-  background-color: goldenrod;
+  background:linear-gradient(black,yellow,black, yellow) no-repeat;
   color: white;
   display: grid;
   place-items: center;
